@@ -30,7 +30,7 @@ button {
     margin: 0 auto;
     min-height: 100vh;
     min-height: 100dvh;
-    background: #F7F8FC; 
+    background: #f4f6fc; 
     display: flex;
     flex-direction: column;
     position: relative;
