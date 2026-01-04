@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="glow.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+
+            <div class="main-body">
+                <div class="upper-body">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="search-input">
+                    </div>
+
+
+                    <div class="title-filter">
+                        <h4>Latest Tasks</h4>
+                        <div class="dropdown">
+                            <button class="dropdown-btn">filter</button>
+                            <div class="dropdown-menu">
+                                <button onclick="loadList(getTasks())">all</button>
+                                <button onclick="loadList(tasksFilter(false))">active</button>
+                                <button onclick="loadList(tasksFilter(true))">completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul class="task-list"></ul>
+                    </div>
+
+                    <div class="noTasks">
+                        <span>No Tasks yet! Add one 👆</span>
+                    </div>
+
+                    <div class="submit-box">
+                        <div class="submit-body">
+                            <input type="text" placeholder="Add text" class="submit-input">
+                            <div>
+                                <button class="submit-btn gradient-btn rect theme-red shadow-effect">Add</button>
+                                <button class="cancel-btn gradient-btn rect theme-blue shadow-effect">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-menu">
+                    <button class="add-btn gradient-btn theme-pink glow-effect shadow-effect">+</button>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</body>
+
+<script src="./app.js"></script>
+
+</html>
