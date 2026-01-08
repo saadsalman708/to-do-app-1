@@ -7,6 +7,8 @@ const taskList = document.querySelector(".task-list");
 const noTasks = document.querySelector(".noTasks");
 const cancelBtn = document.querySelector(".cancel-btn");
 const addBtn = document.querySelector(".add-btn");
+const toggleBtn = document.querySelector(".toggle-btn");
+
 
 
 
@@ -205,7 +207,6 @@ function showSubmit() {
 function tasksFilter(boolean) {
 
     let filter = getTasks().filter((task) => { if (task.isCompleted === boolean) return task });
-    console.log(filter);
 
     loadList(filter);
 }
@@ -252,6 +253,15 @@ document.addEventListener("click", (e) => {
 
 
 
+function toggleTheme() {
+    document.body.classList.toggle("darkTheme");
+    toggleBtn.textContent = document.body.classList.contains("darkTheme") ? "☀️" : "🌙";
+}
+
+
+
+
+
 
 
 
@@ -267,6 +277,7 @@ submitBtn.addEventListener("click", () => isEditing ? updatedTask() : createTask
 cancelBtn.addEventListener("click", cancelEdit);
 searchInput.addEventListener("keyup", () => searchFilter());
 addBtn.addEventListener("click", showSubmit);
+toggleBtn.addEventListener("click", toggleTheme);
 
 
 document.addEventListener("keyup", (e) => {
